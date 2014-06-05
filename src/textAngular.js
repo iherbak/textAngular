@@ -391,8 +391,8 @@ See README.md or https://github.com/fraywing/textAngular/wiki for requirements a
 								x: event.clientX,
 								y: event.clientY
 							};
-							if(startPosition.width === undefined) startPosition.width = _el[0].offsetWidth;
-							if(startPosition.height === undefined) startPosition.height = _el[0].offsetHeight;
+							if(isNaN(startPosition.width)) startPosition.width = _el[0].offsetWidth;
+							if(isNaN(startPosition.height)) startPosition.height = _el[0].offsetHeight;
 							scope.hidePopover();
 							var ratio = startPosition.height / startPosition.width;
 							var mousemove = function(event){
